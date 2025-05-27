@@ -36,7 +36,7 @@ The dataset consists of a CSV file (`data.csv`), where each row corresponds to a
 | **Column Name**                 | **Description**                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------|
 | **Basic**                      |                                                                                 |
-| `ParticipantId`                | Unique Participant ids we assign.                                              |
+| `ParticipantId`                | Unique Participant ids assigned by researchers.                                              |
 | **Pre-conversation Survey on Heaviness of Smoking** |                                                          |
 | `DailyNum`                     | How many cigarettes do you typically smoke per day?                            |
 | `FirstCig`                     | How soon after you wake up do you smoke your first cigarette?                  |
