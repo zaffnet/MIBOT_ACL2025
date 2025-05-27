@@ -1,7 +1,7 @@
 
 # MIBot - Motivational Interviewing for Smoking Cessation Dataset, based on MIBOT Version 6.3A.
 
-This repository contains the dataset from the study "A Fully Generative Motivational Interviewing Counsellor Chatbot for Moving Smokers Towards the Decision to Quit". The dataset comprises annotated transcripts and surveys (including self-reported readiness to quit smoking) from 106 conversations between human smokers and MIBot v6.3A &mdash; a motivational interviewing (MI) chatbot built using OpenAI's GPT-4o.
+This repository contains the dataset from the study "[A Fully Generative Motivational Interviewing Counsellor Chatbot for Moving Smokers Towards the Decision to Quit](https://arxiv.org/abs/2505.17362)". The dataset comprises annotated transcripts and surveys (including self-reported readiness to quit smoking) from 106 conversations between human smokers and MIBot v6.3A &mdash; a motivational interviewing (MI) chatbot built using OpenAI's GPT-4o.
 
 ## Dataset Usage
 Researchers and practitioners can use this dataset to: 
@@ -10,22 +10,22 @@ Researchers and practitioners can use this dataset to:
     2.  Evaluate the relationship between dialogue features and behavior change outcomes, and
     3.  Train or benchmark new conversational agents on MI-style interactions. 
     
-We provide both conversation transcripts, broken down by utterance, and pre and post-conversation survey data..
+We provide both conversation transcripts, broken down by utterance, and pre and post-conversation survey data.
 
-<!-- ## Citation
+## Citation
 
 If you use this dataset, please cite:
 
 ```bibtex
-@inproceedings{Mahmood2025_MIchatbot,
-  title = {A Fully Generative Motivational Interviewing Counsellor Chatbot for Moving Smokers Towards the Decision to Quit},
-  author = {Zafarullah Mahmood and Soliman Ali and Jiading Zhu and Mohamed Abdelwahab and Michelle Yu Collins and Sihan Chen and Yi Cheng Zhao and Jodi Wolff and Osnat Melamed and Nadia Minian and Marta Maslej and Carolynne Cooper and Matt Ratto and Peter Selby and Jonathan Rose},
-  booktitle = {Findings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL)},
-  year = {2025},
-  address = {Vienna, Austria}
-}
-
-``` -->
+@misc{mahmood2025fullygenerativemotivationalinterviewing,
+      title={A Fully Generative Motivational Interviewing Counsellor Chatbot for Moving Smokers Towards the Decision to Quit}, 
+      author={Zafarullah Mahmood and Soliman Ali and Jiading Zhu and Mohamed Abdelwahab and Michelle Yu Collins and Sihan Chen and Yi Cheng Zhao and Jodi Wolff and Osnat Melamed and Nadia Minian and Marta Maslej and Carolynne Cooper and Matt Ratto and Peter Selby and Jonathan Rose},
+      year={2025},
+      eprint={2505.17362},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.17362}
+```
 
 ## Overview of the Dataset
 The dataset consists of a CSV file (`data.csv`), where each row corresponds to a unique participant. We also provide conversation transcripts between MIBot and participants in another CSV file (`conversations.csv`). 
@@ -36,7 +36,7 @@ The dataset consists of a CSV file (`data.csv`), where each row corresponds to a
 | **Column Name**                 | **Description**                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------|
 | **Basic**                      |                                                                                 |
-| `ParticipantId`                | Unique Participant ids we assign.                                              |
+| `ParticipantId`                | Unique Participant ids assigned by researchers.                                              |
 | **Pre-conversation Survey on Heaviness of Smoking** |                                                          |
 | `DailyNum`                     | How many cigarettes do you typically smoke per day?                            |
 | `FirstCig`                     | How soon after you wake up do you smoke your first cigarette?                  |
