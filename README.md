@@ -17,14 +17,33 @@ We provide both conversation transcripts, broken down by utterance, and pre and 
 If you use this dataset, please cite:
 
 ```bibtex
-@misc{mahmood2025fullygenerativemotivationalinterviewing,
-      title={A Fully Generative Motivational Interviewing Counsellor Chatbot for Moving Smokers Towards the Decision to Quit}, 
-      author={Zafarullah Mahmood and Soliman Ali and Jiading Zhu and Mohamed Abdelwahab and Michelle Yu Collins and Sihan Chen and Yi Cheng Zhao and Jodi Wolff and Osnat Melamed and Nadia Minian and Marta Maslej and Carolynne Cooper and Matt Ratto and Peter Selby and Jonathan Rose},
-      year={2025},
-      eprint={2505.17362},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2505.17362}
+@inproceedings{mahmood-etal-2025-fully,
+    title = "A Fully Generative Motivational Interviewing Counsellor Chatbot for Moving Smokers Towards the Decision to Quit",
+    author = "Mahmood, Zafarullah  and
+      Ali, Soliman  and
+      Zhu, Jiading  and
+      Abdelwahab, Mohamed  and
+      Collins, Michelle Yu  and
+      Chen, Sihan  and
+      Zhao, Yi Cheng  and
+      Wolff, Jodi  and
+      Melamed, Osnat C.  and
+      Minian, Nadia  and
+      Maslej, Marta  and
+      Cooper, Carolynne  and
+      Ratto, Matt  and
+      Selby, Peter  and
+      Rose, Jonathan",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-acl.1283/",
+    doi = "10.18653/v1/2025.findings-acl.1283",
+    pages = "25008--25043",
+    ISBN = "979-8-89176-256-5"
+}
 ```
 
 ## Overview of the Dataset
