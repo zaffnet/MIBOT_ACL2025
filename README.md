@@ -1,5 +1,5 @@
 
-# MIBot - Motivational Interviewing for Smoking Cessation Dataset, based on MIBOT Version 6.3A.
+# MIBot - Motivational Interviewing for Smoking Cessation Dataset, based on MIBoT Version 6.3A.
 
 This repository contains the dataset from the study "[A Fully Generative Motivational Interviewing Counsellor Chatbot for Moving Smokers Towards the Decision to Quit](https://arxiv.org/abs/2505.17362)". The dataset comprises annotated transcripts and surveys (including self-reported readiness to quit smoking) from 106 conversations between human smokers and MIBot v6.3A &mdash; a motivational interviewing (MI) chatbot built using OpenAI's GPT-4o.
 
