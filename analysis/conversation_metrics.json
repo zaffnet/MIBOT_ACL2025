@@ -1,0 +1,127 @@
+{
+  "metric_summaries": {
+    "total_utterances": {
+      "mean": 80.71,
+      "median": 78.0,
+      "std": 25.54,
+      "minimum": 36.0,
+      "maximum": 163.0
+    },
+    "counsellor_utterances": {
+      "mean": 57.88,
+      "median": 56.0,
+      "std": 19.94,
+      "minimum": 26.0,
+      "maximum": 123.0
+    },
+    "client_utterances": {
+      "mean": 22.83,
+      "median": 22.0,
+      "std": 6.88,
+      "minimum": 9.0,
+      "maximum": 40.0
+    },
+    "words_per_counsellor_utterance": {
+      "mean": 14.58,
+      "median": 14.59,
+      "std": 1.54,
+      "minimum": 10.93,
+      "maximum": 18.9
+    },
+    "words_per_client_utterance": {
+      "mean": 7.0,
+      "median": 6.99,
+      "std": 2.75,
+      "minimum": 1.09,
+      "maximum": 13.39
+    }
+  },
+  "counsellor_utterance_share": 0.7171,
+  "duration_summary": {
+    "mean": 30.0,
+    "median": 30.0,
+    "std": null,
+    "minimum": 30.0,
+    "maximum": 30.0,
+    "count": 1
+  },
+  "confidence_change_correlation": 0.2919,
+  "gain_thresholds": {
+    "substantial_threshold": 2,
+    "short_threshold": 60,
+    "long_threshold": 130,
+    "share_substantial_short": 0.20833333333333334,
+    "share_substantial_long": 0.5,
+    "bin_summary": {
+      "[30, 40)": {
+        "mean_change": 1.0,
+        "median_change": 0.0,
+        "count": 5
+      },
+      "[40, 50)": {
+        "mean_change": 0.5,
+        "median_change": 0.0,
+        "count": 6
+      },
+      "[50, 60)": {
+        "mean_change": 1.0,
+        "median_change": 0.0,
+        "count": 13
+      },
+      "[60, 70)": {
+        "mean_change": 1.7142857142857142,
+        "median_change": 1.0,
+        "count": 14
+      },
+      "[70, 80)": {
+        "mean_change": 1.3333333333333333,
+        "median_change": 2.0,
+        "count": 18
+      },
+      "[80, 90)": {
+        "mean_change": 2.25,
+        "median_change": 2.0,
+        "count": 12
+      },
+      "[90, 100)": {
+        "mean_change": 2.3125,
+        "median_change": 3.0,
+        "count": 16
+      },
+      "[100, 110)": {
+        "mean_change": 0.875,
+        "median_change": 0.5,
+        "count": 8
+      },
+      "[110, 120)": {
+        "mean_change": 3.2857142857142856,
+        "median_change": 4.0,
+        "count": 7
+      },
+      "[120, 130)": {
+        "mean_change": 4.666666666666667,
+        "median_change": 5.0,
+        "count": 3
+      },
+      "[130, 140)": {
+        "mean_change": 3.5,
+        "median_change": 3.5,
+        "count": 2
+      },
+      "[140, 150)": {
+        "mean_change": 2.0,
+        "median_change": 2.0,
+        "count": 1
+      },
+      "[160, 170)": {
+        "mean_change": 0.0,
+        "median_change": 0.0,
+        "count": 1
+      }
+    },
+    "optimal_window": [
+      110,
+      120
+    ]
+  }
+}
