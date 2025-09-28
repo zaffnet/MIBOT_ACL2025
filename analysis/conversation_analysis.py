@@ -5,12 +5,23 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from textwrap import dedent
 
 import numpy as np
 import pandas as pd
 
-WORDS_PER_MINUTE = 125  # fallback rate when self-reported durations are unavailable
+import sys
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from constants import (
+    CONVERSATION_LENGTH_THRESHOLDS,
+    DATA_CSV,
+    WORDS_PER_MINUTE,
+    CONFIDENCE_GAIN_THRESHOLD,
+    CONVERSATIONS_CSV,
+)
 
 
 @dataclass
@@ -44,8 +55,8 @@ def format_range(minimum: float, maximum: float, decimals: int = 0) -> str:
 
 
 def load_datasets(base_path: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
-    conversations = pd.read_csv(base_path / "conversations.csv")
-    survey = pd.read_csv(base_path / "data.csv")
+    conversations = pd.read_csv(CONVERSATIONS_CSV)
+    survey = pd.read_csv(DATA_CSV)
     return conversations, survey
 
 
@@ -170,10 +181,10 @@ def generate_report(base_path: Path) -> str:
     confidence_change = confidence["PostRulerConfidence"] - confidence["PreRulerConfidence"]
     correlation_r = compute_correlation(metrics["total_utterances"], confidence_change)
 
-    short_threshold = 60
-    long_threshold = 140
-    optimal_lower = 90
-    optimal_upper = 130
+    short_threshold = CONVERSATION_LENGTH_THRESHOLDS["short"]
+    long_threshold = CONVERSATION_LENGTH_THRESHOLDS["long"]
+    optimal_lower = CONVERSATION_LENGTH_THRESHOLDS["optimal_lower"]
+    optimal_upper = CONVERSATION_LENGTH_THRESHOLDS["optimal_upper"]
 
     short_subset = confidence_change[metrics["total_utterances"] < short_threshold]
     long_subset = confidence_change[metrics["total_utterances"] > long_threshold]
@@ -184,7 +195,9 @@ def generate_report(base_path: Path) -> str:
     optimal_subset = confidence_change[optimal_mask]
 
     short_gain_rate = (
-        (short_subset >= 2).sum() / short_subset.count() * 100 if short_subset.count() else 0
+        (short_subset >= CONFIDENCE_GAIN_THRESHOLD).sum() / short_subset.count() * 100
+        if short_subset.count()
+        else 0
     )
     long_mean_change = long_subset.mean() if long_subset.count() else float("nan")
     optimal_mean_change = optimal_subset.mean() if optimal_subset.count() else float("nan")
